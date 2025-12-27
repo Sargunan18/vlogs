@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERROR 404</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: url('https://wallpapercave.com/wp/wp2757874.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Orbitron', sans-serif;
+            color: #00f2ff;
+            text-align: center;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 120px;
+            text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+            animation: glitch 1s infinite;
+        }
+
+        @keyframes glitch {
+            0% {transform: translateX(0);}
+            20% {transform: translateX(-5px);}
+            40% {transform: translateX(5px);}
+            60% {transform: translateX(-3px);}
+            80% {transform: translateX(3px);}
+            100% {transform: translateX(0);}
+        }
+
+        .msg {
+            font-size: 26px;
+            margin: 10px 0;
+            opacity: 0.8;
+        }
+
+        .btn {
+            margin-top: 25px;
+            padding: 12px 30px;
+            border: 2px solid #00eaff;
+            background: transparent;
+            font-size: 22px;
+            color: cyan;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: cyan;
+            color: black;
+            transform: scale(1.2);
+            box-shadow: 0 0 25px cyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>404</h1>
+        <div class="msg">🚫 LEVEL NOT FOUND</div>
+        <div class="msg">Maybe you took the wrong portal?</div>
+        <a class="btn" href="/">⬅ Return to Safe Zone</a>
+    </div>
+</body>
+</html>
+

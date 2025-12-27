@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERROR 500</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: url('https://wallpapercave.com/wp/wp2701896.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Orbitron', sans-serif;
+            color: #ff3c3c;
+            text-align: center;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.65);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 120px;
+            text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+            animation: shake 0.4s infinite;
+        }
+
+        @keyframes shake {
+            0% {transform: translateX(-4px);}
+            50% {transform: translateX(4px);}
+            100% {transform: translateX(-4px);}
+        }
+
+        .msg {
+            font-size: 26px;
+            opacity: 0.9;
+            margin: 15px 0;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid red;
+            color: red;
+            font-size: 22px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: red;
+            color: black;
+            transform: scale(1.2);
+            box-shadow: 0 0 25px red;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>500</h1>
+        <div class="msg">💀 SYSTEM MALFUNCTION</div>
+        <div class="msg">A fatal error occurred in the game engine.</div>
+        <a class="btn" href="/">🔁 Restart Game</a>
+    </div>
+</body>
+</html>
