@@ -23,7 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9!dzqw4kw%vm-24d7c3tf4&%4thea&6)&e!dv=2x*a%4m$vui+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# For development only: set to True so the development server will serve static files.
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -122,10 +123,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS=[
-    "/games/static/games/"
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'games' / 'static',
 ]
+# Directory to collect static files to when running `collectstatic`
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # used in production deployments
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
